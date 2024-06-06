@@ -22,7 +22,6 @@ async function app() {
   const cleanedEntities = removePunctuation(entities);
   const entityArray = convertToArray(cleanedEntities);
 
-  console.log("entityArray:", entityArray);
   const searchResult = await queryTables(entityArray);
 
   console.log("searchResult", searchResult);

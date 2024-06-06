@@ -25,8 +25,8 @@ const convertArrayToObject = (array, key) => {
 
   for (let i = 0; i < totalCount; i++) {}
 
-  console.log("count:", count);
-  console.log("totalCount:", totalCount);
+  // Temporary return value
+  return array;
 };
 
 export default convertArrayToObject;
