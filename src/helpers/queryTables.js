@@ -16,11 +16,6 @@ async function queryTables(searchTerms) {
   console.log("searchTerms", searchTerms);
   const similarityThreshold = 0.3;
   const conditions = searchTerms
-    // .map(
-    //   (term, index) => `levenshtein(name, '${term}')<=${similarityThreshold}`
-    // )
-    // .join(" OR ");
-
     .map(
       (term, index) => `similarity(name, '$${term}') > ${similarityThreshold}`
     )
