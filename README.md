@@ -40,7 +40,7 @@ An array of search terms is saved in
 
 One of these terms is randomly selected each time the code runs.
 
-The search term used and the final output are logged to the console.
+The search term used and the final output are logged to the terminal.
 
 **Example**
 
