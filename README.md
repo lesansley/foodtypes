@@ -72,9 +72,3 @@ Output: [
   }
 ]
 ```
-
-## Todo
-
-- Create an enviromnetal file to hold all the credentials.
-
-- Place all configuration variables in a common config folder.
