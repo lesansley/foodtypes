@@ -1,13 +1,15 @@
+import pgConfig from "../../config/pgConfig.js";
 import pkg from "pg";
 const { Client } = pkg;
-
 // Define the connection configuration
+
+const { user, password, databaseName, port, host } = pgConfig;
 const client = new Client({
-  user: "root",
-  host: "localhost",
-  database: "foodstyles",
-  password: "password",
-  port: 5432,
+  user,
+  password,
+  database: databaseName,
+  port,
+  host,
 });
 
 // Function to execute the combined query with search terms
