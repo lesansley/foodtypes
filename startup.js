@@ -1,18 +1,19 @@
+import "dotenv/config";
 import { exec } from "child_process";
 import seed from "./seeders/seed.js";
+import pgConfig from "./config/pgConfig.js";
 import pkg from "pg";
 const { Client } = pkg;
 
-const databaseName = "foodstyles";
-const databaseUrl = `postgres://root:password@localhost:5432/${databaseName}`;
-
+const { user, password, databaseName, database, port, host } = pgConfig;
+const databaseUrl = `postgres://${user}:${password}@${host}:${port}/${databaseName}`;
 async function createDatabaseIfNotExists() {
   const adminClient = new Client({
-    user: "root",
-    host: "localhost",
-    database: "postgres",
-    password: "password",
-    port: 5432,
+    user,
+    host,
+    database,
+    password,
+    port,
   });
 
   try {

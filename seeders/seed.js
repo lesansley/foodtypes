@@ -2,7 +2,7 @@ import pkg from "pg";
 const { Client } = pkg;
 import fs from "fs";
 import csv from "csv-parser";
-import pgConfig from "../config/config.js";
+import pgConfig from "../config/pgConfig.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -28,8 +28,16 @@ async function seedTable(client, csvFilePath, tableName) {
   console.log(`Seeding for table ${tableName} completed.`);
 }
 
+const { user, password, databaseName, port, host } = pgConfig;
+
 async function seed() {
-  const client = new Client(pgConfig);
+  const client = new Client({
+    user,
+    password,
+    database: databaseName,
+    port,
+    host,
+  });
 
   try {
     await client.connect();
