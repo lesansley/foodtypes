@@ -42,10 +42,10 @@ async function seed() {
   try {
     await client.connect();
     console.log("Database seeding started.");
-    await seedTable(client, "brands.csv", "brands");
-    await seedTable(client, "cities.csv", "cities");
-    await seedTable(client, "diets.csv", "diets");
-    await seedTable(client, "dish-types.csv", "dish-types");
+    await seedTable(client, "brands.csv", "brand");
+    await seedTable(client, "cities.csv", "city");
+    await seedTable(client, "diets.csv", "diet");
+    await seedTable(client, "dish-types.csv", "dish");
 
     console.log("Database seeding completed.");
   } catch (err) {

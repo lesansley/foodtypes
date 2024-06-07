@@ -23,16 +23,16 @@ async function queryTables(searchTerms) {
     .join(" OR ");
 
   const query = `
-    SELECT 'brands' AS table, id, name FROM "brands"
+    SELECT 'brand' AS table, id, name FROM "brand"
 		WHERE ${conditions}
     UNION ALL
-    SELECT 'cities' AS table, id, name FROM "cities"
+    SELECT 'city' AS table, id, name FROM "city"
 		WHERE ${conditions}
     UNION ALL
-    SELECT 'diets' AS table, id, name FROM "diets"
+    SELECT 'diet' AS table, id, name FROM "diet"
 		WHERE ${conditions}
     UNION ALL
-    SELECT 'dishes' AS table, id, name FROM "dish-types"
+    SELECT 'dish' AS table, id, name FROM "dish"
 		WHERE ${conditions}
   `;
 
