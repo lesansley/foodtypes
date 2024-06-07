@@ -10,11 +10,18 @@ Brew install instructions
 
 `brew install postgresql@16`
 
-Create a superuser role for user `root` with password `password`
-
-Alternatively, you can edit the credentials in `./config/config.js` and `./src/startup.js`
-
 ## Getting Started
+
+Create a `.env` file for all the environmental variables. You can copy the variables below if yours do not differ.
+
+```
+POSTGRES_USER="root"
+POSTGRES_PASSWORD="password"
+POSTGRES_HOST="localhost"
+POSTGRES_DATABASE_NAME="foodstyles"
+POSTGRES_DATABASE="postgres"
+POSTGRES_PORT="5432"
+```
 
 Migrate and seed a Postgres database with the following command
 
