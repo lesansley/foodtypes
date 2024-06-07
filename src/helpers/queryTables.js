@@ -13,7 +13,6 @@ const client = new Client({
 // Function to execute the combined query with search terms
 async function queryTables(searchTerms) {
   // Prepare the search condition with placeholders
-  console.log("searchTerms", searchTerms);
   const similarityThreshold = 0.3;
   const conditions = searchTerms
     .map(
