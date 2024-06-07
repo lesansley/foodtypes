@@ -24,7 +24,6 @@ async function app() {
 
   const searchResult = await queryTables(entityArray);
 
-  console.log("searchResult", searchResult);
   const formattedResult = convertArrayToObject(searchResult, "table");
   console.log(formattedResult);
 }

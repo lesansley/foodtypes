@@ -8,7 +8,6 @@ const convertArrayToObject = (arr) => {
     return acc;
   }, {});
 
-  console.log("grouped array:", grouped);
   // Check if there are any duplicates
   const hasDuplicates = Object.values(grouped).some(
     (items) => items.length > 1
