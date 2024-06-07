@@ -1,5 +1,5 @@
 import { exec } from "child_process";
-import seed from "../seeders/seed.js";
+import seed from "./seeders/seed.js";
 import pkg from "pg";
 const { Client } = pkg;
 
@@ -54,7 +54,7 @@ function runMigrations() {
   });
 }
 
-export default async function startup() {
+async function startup() {
   try {
     await createDatabaseIfNotExists();
     console.log("Database check and creation complete.");
@@ -66,3 +66,5 @@ export default async function startup() {
     console.error("Startup process failed:", error);
   }
 }
+
+startup();

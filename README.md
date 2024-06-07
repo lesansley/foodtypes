@@ -16,13 +16,13 @@ Alternatively, you can edit the credentials in `./config/config.js` and `./src/s
 
 ## Getting Started
 
+Migrate and seed a Postgres database with the following command
+
 ```
-npm run dev
+npm run startup
 ```
 
-Runs the app in development mode.
-
-At startup a Postgres database structure is created through migrations and seeded with data. The seeding files can be accessed in `./data`.
+The seeding files are `.csv` format and can be accessed in `./data`.
 
 A Postgres extension is required to be installed manually. Follow these instructions.
 
@@ -30,7 +30,15 @@ A Postgres extension is required to be installed manually. Follow these instruct
 
 `CREATE EXTENSION pg_trgm`
 
-Once the extension has been installed either save any file in the project or restart the project.
+Once the extension has been installed In the project directory, you can run:
+
+```
+npm run dev
+```
+
+Runs the app in development mode.
+
+The page will reload when you make changes.
 
 ## Results
 
